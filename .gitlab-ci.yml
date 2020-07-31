@@ -4,8 +4,9 @@ pages:
   script:
   - npm install
   - npm run-script build
-  - rm -rf public
-  - mkdir public
+  - mkdir .public
+  - cp -r * .public
+  - mv .public public
   - cp -r dist/* public
   environment:
     name: staging
