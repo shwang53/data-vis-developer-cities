@@ -1,12 +1,9 @@
+image: node:12
 pages:
-  image: node:12
   stage: deploy
   script:
   - npm install
   - npm run-script build
-  - mkdir .public
-  - cp -r * .public
-  - mv .public public
   environment:
     name: staging
     url: https://dev.suuk.gitlab.io/data-visualization-project/
