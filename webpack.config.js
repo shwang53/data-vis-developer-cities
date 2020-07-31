@@ -54,7 +54,8 @@ const config = {
     plugins: [
         new copy([
             {from: APP_DIR + '/html/', to: BUILD_DIR},
-            {from: APP_DIR + '/assets/', to: BUILD_DIR + '/assets/'}
+            {from: APP_DIR + '/assets/', to: BUILD_DIR + '/assets/'},
+            {from: APP_DIR + '/data/', to: BUILD_DIR + '/data/'}
         ], {
             copyUnmodified: false,
             debug: 'debug'
