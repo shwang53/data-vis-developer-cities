@@ -7,6 +7,9 @@ pages:
   - mkdir .public
   - cp -r * .public
   - mv .public public
+  environment:
+    name: staging
+    url: https://https://dev.suuk.gitlab.io/data-visualization-project/
   artifacts:
     paths:
     - public
