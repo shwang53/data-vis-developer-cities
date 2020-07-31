@@ -10,10 +10,17 @@ const APP_DIR = path.resolve(__dirname, "src");
 const config = {
   mode: "development",
 
-  entry: {
-    app: [APP_DIR + "/index.js"],
-  },
-
+  // entry: {
+  //   app: [APP_DIR + "/index.js"],
+  // },
+  entry: [
+    './src/scripts/main.js',
+    './src/scripts/chart1.js',
+    './src/scripts/chart2.js',
+    './src/scripts/chart3.js',
+    './src/styles/main.scss',
+    './src/html/index.html'
+  ],
   output: {
     path: BUILD_DIR,
     filename: "bundle.js",
