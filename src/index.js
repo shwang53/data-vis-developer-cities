@@ -4,13 +4,13 @@
  */
 
 // HTML Files
-require('./html/index.html');
+require("./html/index.html");
 
 // Stylesheets
-require('./styles/main.scss');
+require("./styles/main.scss");
 
 // Scripts
-require('./scripts/main.js');
-require('./scripts/chart1.js');
-require('./scripts/chart2.js');
-require('./scripts/chart3.js');
+require("./scripts/main.js");
+require("./scripts/chart1.js");
+require("./scripts/chart2.js");
+require("./scripts/chart3.js");

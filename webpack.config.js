@@ -67,7 +67,8 @@ const config = {
         { from: APP_DIR + "/html/", to: BUILD_DIR },
         { from: APP_DIR + "/assets/", to: BUILD_DIR + "/assets/" },
         { from: APP_DIR + "/data/", to: BUILD_DIR + "/data/" },
-        { from: APP_DIR + "/src/", to: BUILD_DIR + "/src/" },
+        { from: APP_DIR + "/scripts/", to: BUILD_DIR + "/scripts/" },
+        { from: APP_DIR, to: BUILD_DIR },
       ],
       {
         copyUnmodified: false,
