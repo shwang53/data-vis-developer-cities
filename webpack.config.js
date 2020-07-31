@@ -1,66 +1,80 @@
-'use strict';
+"use strict";
 
-const webpack = require('webpack');
-const path = require('path');
-const copy = require('copy-webpack-plugin');
+const webpack = require("webpack");
+const path = require("path");
+const copy = require("copy-webpack-plugin");
 
-const BUILD_DIR = path.resolve(__dirname, 'dist');
-const APP_DIR = path.resolve(__dirname, 'src');
+const BUILD_DIR = path.resolve(__dirname, "dist");
+const APP_DIR = path.resolve(__dirname, "src");
 
 const config = {
-    mode: 'development',
+  mode: "development",
 
-    entry: {
-        app: [APP_DIR + '/index.js']
-    },
+  entry: {
+    app: [APP_DIR + "/index.js"],
+  },
 
-    output: {
-        path: BUILD_DIR,
-        filename: 'bundle.js'
-    },
+  output: {
+    path: BUILD_DIR,
+    filename: "bundle.js",
+  },
 
-    context: path.join(__dirname, 'src'),
+  context: path.join(__dirname, "src"),
 
-    module: {
-        rules: [
-            {
-                test: /\.jsx?/,
-                exclude: [/node_modules/],
-                include: APP_DIR,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env'],
-                    },
-                },
-            },
-            {
-                test: /\.css$/,
-                // the order of the following loaders is important
-                loaders: ['style-loader', 'css-loader?-url', 'postcss-loader', 'sass-loader'],
-            },
-            {
-                test: /\.scss$/,
-                // the order of the following loaders is important
-                loaders: ['style-loader', 'css-loader?-url', 'postcss-loader', 'sass-loader'],
-            },
-            {
-                test: /\.html$/,
-                loaders: ['raw-loader'],
-            },
+  module: {
+    rules: [
+      {
+        test: /\.jsx?/,
+        exclude: [/node_modules/],
+        include: APP_DIR,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
+      {
+        test: /\.css$/,
+        // the order of the following loaders is important
+        loaders: [
+          "style-loader",
+          "css-loader?-url",
+          "postcss-loader",
+          "sass-loader",
         ],
-    },
+      },
+      {
+        test: /\.scss$/,
+        // the order of the following loaders is important
+        loaders: [
+          "style-loader",
+          "css-loader?-url",
+          "postcss-loader",
+          "sass-loader",
+        ],
+      },
+      {
+        test: /\.html$/,
+        loaders: ["raw-loader"],
+      },
+    ],
+  },
 
-    plugins: [
-        new copy([
-            {from: APP_DIR + '/html/', to: BUILD_DIR},
-            {from: APP_DIR + '/assets/', to: BUILD_DIR + '/assets/'},
-            {from: APP_DIR + '/data/', to: BUILD_DIR + '/data/'}
-        ], {
-            copyUnmodified: false,
-            debug: 'debug'
-        })
-    ]
+  plugins: [
+    new copy(
+      [
+        { from: APP_DIR + "/html/", to: BUILD_DIR },
+        { from: APP_DIR + "/assets/", to: BUILD_DIR + "/assets/" },
+        { from: APP_DIR + "/data/", to: BUILD_DIR + "/data/" },
+        { from: APP_DIR + "/src/", to: BUILD_DIR + "/src/" },
+      ],
+      {
+        copyUnmodified: false,
+        debug: "debug",
+      }
+    ),
+  ],
 };
 
 module.exports = config;
