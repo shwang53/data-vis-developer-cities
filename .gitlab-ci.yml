@@ -4,9 +4,9 @@ pages:
   script:
   - npm install
   - npm run-script build
-  - mkdir .public
-  - cp -r * .public
-  - mv .public public
+  - rm -rf public
+  - mkdir public
+  - cp -r dist/* public
   environment:
     name: staging
     url: https://dev.suuk.gitlab.io/data-visualization-project/
