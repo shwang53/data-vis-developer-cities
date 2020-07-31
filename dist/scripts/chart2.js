@@ -1,5 +1,4 @@
-async function top10Chart2() {
-  const data = await d3.csv("/src/data/devpop.csv");
+function top10Chart2() {
   const margin = 150;
   const height = 600;
   const width = 1000;
@@ -150,9 +149,7 @@ async function top10Chart2() {
   drawAnnotation();
   drawTop10Chart();
 }
-
-async function top3Chart2() {
-  const data = await d3.csv("/src/data/devpop.csv");
+function top3Chart2() {
   const margin = 150;
   const height = 600;
   const width = 1000;

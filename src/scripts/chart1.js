@@ -1,5 +1,97 @@
-async function top10Chart() {
-  const data = await d3.csv("/src/data/devpop.csv");
+const data = [
+  {
+    state: "CA",
+    dev_pop: 628414,
+    salary: 127950,
+    cost_of_living_index: 151.7,
+    top3_dev_pop: 628414,
+    top3_salary: 127950,
+    top3_cost_of_living_index: 151.7,
+  },
+  {
+    state: "FL",
+    dev_pop: 181314,
+    salary: 95610,
+    cost_of_living_index: 97.9,
+    top3_dev_pop: 0,
+    top3_salary: 0,
+    top3_cost_of_living_index: 0,
+  },
+  {
+    state: "IL",
+    dev_pop: 186426,
+    salary: 96610,
+    cost_of_living_index: 89.3,
+    top3_dev_pop: 0,
+    top3_salary: 0,
+    top3_cost_of_living_index: 0,
+  },
+  {
+    state: "MA",
+    dev_pop: 147430,
+    salary: 109130,
+    cost_of_living_index: 131.6,
+    top3_dev_pop: 0,
+    top3_salary: 0,
+    top3_cost_of_living_index: 131.6,
+  },
+  {
+    state: "NJ",
+    dev_pop: 162977,
+    salary: 107640,
+    cost_of_living_index: 125.1,
+    top3_dev_pop: 0,
+    top3_salary: 0,
+    top3_cost_of_living_index: 0,
+  },
+  {
+    state: "NY",
+    dev_pop: 218041,
+    salary: 116830,
+    cost_of_living_index: 139.1,
+    top3_dev_pop: 218041,
+    top3_salary: 116830,
+    top3_cost_of_living_index: 139.1,
+  },
+  {
+    state: "PA",
+    dev_pop: 152900,
+    salary: 96370,
+    cost_of_living_index: 101.7,
+    top3_dev_pop: 0,
+    top3_salary: 0,
+    top3_cost_of_living_index: 0,
+  },
+  {
+    state: "TX",
+    dev_pop: 324717,
+    salary: 108760,
+    cost_of_living_index: 91.5,
+    top3_dev_pop: 324717,
+    top3_salary: 0,
+    top3_cost_of_living_index: "",
+  },
+  {
+    state: "VA",
+    dev_pop: 204699,
+    salary: 113690,
+    cost_of_living_index: 100.7,
+    top3_dev_pop: 0,
+    top3_salary: 0,
+    top3_cost_of_living_index: 0,
+  },
+  {
+    state: "WA",
+    dev_pop: 143971,
+    salary: 131790,
+    cost_of_living_index: 110.7,
+    top3_dev_pop: 0,
+    top3_salary: 131790,
+    top3_cost_of_living_index: 0,
+  },
+];
+
+function top10Chart() {
   const margin = 150;
   const height = 600;
   const width = 1000;
@@ -157,8 +249,7 @@ async function top10Chart() {
   // legend.append("text").attr("x", 210).attr("y", -70).text("Top 3");
 }
 
-async function top3Chart() {
-  const data = await d3.csv("/src/data/devpop.csv");
+function top3Chart() {
   const margin = 150;
   const height = 600;
   const width = 1000;
