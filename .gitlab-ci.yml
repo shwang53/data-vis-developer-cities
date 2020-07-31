@@ -7,8 +7,6 @@ pages:
   - mkdir .public
   - cp -r * .public
   - mv .public public
-  - mv dist public
-
   environment:
     name: staging
     url: https://dev.suuk.gitlab.io/data-visualization-project/
