@@ -2,7 +2,7 @@ image: node:12
 pages:
   stage: deploy
   script:
-  - npm install
+  - npm install -g http-server
   - npm run-script build
   - mkdir .public
   - cp -r * .public
