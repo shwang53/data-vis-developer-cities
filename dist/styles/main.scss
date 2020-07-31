@@ -3,7 +3,10 @@
 body {
   margin: 0;
   padding: 0;
+  margin-left: 100px;
+  margin-right: 100px;
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -117,7 +120,7 @@ main {
   text-align: center;
 }
 h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   color: Black;
   font-family: cursive;
   b {
@@ -126,7 +129,7 @@ h1 {
 }
 
 .slide-content p {
-  font-size: 4rem;
+  font-size: 2rem;
   color: Black;
   font-family: cursive;
   b {
@@ -222,7 +225,6 @@ h1 {
   svg {
     width: 100vh;
     .annotation {
-      text-decoration: solid underline;
     }
   }
   .radio-buttons {
@@ -290,7 +292,6 @@ h1 {
   svg {
     width: 100vh;
     .annotation {
-      text-decoration: solid underline;
     }
   }
 }
@@ -350,7 +351,6 @@ h1 {
   svg {
     width: 100vh;
     .annotation {
-      text-decoration: solid underline;
     }
   }
 }

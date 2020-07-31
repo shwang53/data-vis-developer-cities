@@ -1,7 +1,7 @@
 function top10Chart2() {
-  const margin = 150;
-  const height = 600;
-  const width = 1000;
+  const margin = 140;
+  const height = 400;
+  const width = 800;
   const xScale = d3
     .scaleBand()
     .domain(data.map((d) => d.state))
@@ -40,7 +40,7 @@ function top10Chart2() {
   svg
     .append("text")
     .attr("text-anchor", "end")
-    .attr("x", 500)
+    .attr("x", 420)
     .attr("y", height + 80)
     .text("States")
     .style("font-size", 23);
@@ -49,7 +49,7 @@ function top10Chart2() {
     .append("text")
     .attr("text-anchor", "end")
     .attr("transform", "rotate(-90)")
-    .attr("x", -200)
+    .attr("x", -100)
     .attr("y", -120)
     .text("Annual Average Salary ($)")
     .style("font-size", 23);
@@ -139,7 +139,7 @@ function top10Chart2() {
     var annotation = svg.append("g");
     annotation
       .append("text")
-      .attr("x", 430)
+      .attr("x", 250)
       .attr("y", 20)
       .attr("class", "annotation")
       .classed("annotation", true)
@@ -150,9 +150,9 @@ function top10Chart2() {
   drawTop10Chart();
 }
 function top3Chart2() {
-  const margin = 150;
-  const height = 600;
-  const width = 1000;
+  const margin = 140;
+  const height = 400;
+  const width = 800;
   const xScale = d3
     .scaleBand()
     .domain(data.map((d) => d.state))
@@ -191,7 +191,7 @@ function top3Chart2() {
   svg
     .append("text")
     .attr("text-anchor", "end")
-    .attr("x", 500)
+    .attr("x", 420)
     .attr("y", height + 80)
     .text("States")
     .style("font-size", 23);
@@ -200,7 +200,7 @@ function top3Chart2() {
     .append("text")
     .attr("text-anchor", "end")
     .attr("transform", "rotate(-90)")
-    .attr("x", -200)
+    .attr("x", -100)
     .attr("y", -120)
     .text("Annual Average Salary ($)")
     .style("font-size", 23);
@@ -293,7 +293,7 @@ function top3Chart2() {
     var annotation = svg.append("g");
     annotation
       .append("text")
-      .attr("x", 430)
+      .attr("x", 250)
       .attr("y", 20)
       .attr("class", "annotation")
       .classed("annotation", true)

@@ -1,7 +1,7 @@
 async function top10Chart3() {
-  const margin = 150;
-  const height = 600;
-  const width = 1000;
+  const margin = 140;
+  const height = 400;
+  const width = 800;
   const xScale = d3
     .scaleBand()
     .domain(data.map((d) => d.state))
@@ -42,7 +42,7 @@ async function top10Chart3() {
   svg
     .append("text")
     .attr("text-anchor", "end")
-    .attr("x", 500)
+    .attr("x", 420)
     .attr("y", height + 80)
     .text("States")
     .style("font-size", 23);
@@ -51,7 +51,7 @@ async function top10Chart3() {
     .append("text")
     .attr("text-anchor", "end")
     .attr("transform", "rotate(-90)")
-    .attr("x", -200)
+    .attr("x", -100)
     .attr("y", -60)
     .text("Cost of Living Index")
     .style("font-size", 23);
@@ -153,9 +153,9 @@ async function top10Chart3() {
 }
 
 async function top3Chart3() {
-  const margin = 150;
-  const height = 600;
-  const width = 1000;
+  const margin = 140;
+  const height = 400;
+  const width = 800;
   const xScale = d3
     .scaleBand()
     .domain(data.map((d) => d.state))
@@ -196,7 +196,7 @@ async function top3Chart3() {
   svg
     .append("text")
     .attr("text-anchor", "end")
-    .attr("x", 500)
+    .attr("x", 420)
     .attr("y", height + 80)
     .text("States")
     .style("font-size", 23);
@@ -205,7 +205,7 @@ async function top3Chart3() {
     .append("text")
     .attr("text-anchor", "end")
     .attr("transform", "rotate(-90)")
-    .attr("x", -200)
+    .attr("x", -100)
     .attr("y", -60)
     .text("Cost of Living Index")
     .style("font-size", 23);
