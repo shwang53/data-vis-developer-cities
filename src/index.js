@@ -11,3 +11,6 @@ require('./styles/main.scss');
 
 // Scripts
 require('./scripts/main.js');
+require('./scripts/chart1.js');
+require('./scripts/chart2.js');
+require('./scripts/chart3.js');
