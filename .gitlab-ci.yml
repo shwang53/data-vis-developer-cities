@@ -1,4 +1,5 @@
 pages:
+  image: node:6
   stage: deploy
   script:
   - npm install
